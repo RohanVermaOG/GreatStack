@@ -20,5 +20,9 @@ This is a **Grocery Delivery Web Application** built using the **MERN stack** (M
 * **Authentication:** JWT (JSON Web Tokens)
 * **Deployment:** Vercel
 
----
+#### **Live Links:**
+
+* **Frontend:** [https://greatstack-frontend-iota.vercel.app/](https://greatstack-frontend-iota.vercel.app/)
+* **Backend:** [https://greatstack-backend.vercel.app/](https://greatstack-backend.vercel.app/)
+
 
