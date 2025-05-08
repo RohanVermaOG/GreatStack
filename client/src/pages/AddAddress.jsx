@@ -40,9 +40,14 @@ const AddAddress = () => {
   const onSubmitHandler = async (e) => {
     e.preventDefault();
     try {
+      if (!user?._id) {
+        toast.error("User not authenticated properly");
+        return;
+      }
+
       const { data } = await axios.post("/api/address/add", {
         address,
-        userId: user?._id, // ✅ Ensure userId is passed
+        userId: user._id,
       });
 
       if (data.success) {
@@ -52,7 +57,7 @@ const AddAddress = () => {
         toast.error(data.message);
       }
     } catch (error) {
-      toast.error(error.message);
+      toast.error(error.response?.data?.message || error.message);
     }
   };
 
